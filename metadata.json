@@ -1,0 +1,8 @@
+{
+  "name": "MASIDY — Travel Marketplace",
+  "description": "Multi-vendor global travel marketplace connecting travelers, tourism service providers, affiliate sellers, and platform operations with unified bookings, quotations, and commission ledger.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

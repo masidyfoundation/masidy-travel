@@ -1,0 +1,871 @@
+{
+  "users": [
+    {
+      "id": "usr_customer_layla",
+      "name": "ليلى المنصور",
+      "email": "customer@masidy.com",
+      "role": "customer",
+      "phone": "+20 100 482 9102",
+      "passwordHash": "72c62b2979fbc782d4c2d25686e2c301ff8f86fd6593176bc6397eeaa1901d71",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "usr_provider_med",
+      "name": "طارق العوضي",
+      "email": "provider@masidy.com",
+      "role": "provider",
+      "phone": "+39 06 8821 4401",
+      "organizationId": "org_med_horizons",
+      "passwordHash": "72c62b2979fbc782d4c2d25686e2c301ff8f86fd6593176bc6397eeaa1901d71",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "usr_provider_nile",
+      "name": "ياسر الشريف",
+      "email": "nile@masidy.com",
+      "role": "provider",
+      "phone": "+20 2 2735 9011",
+      "organizationId": "org_nile_haramain",
+      "passwordHash": "72c62b2979fbc782d4c2d25686e2c301ff8f86fd6593176bc6397eeaa1901d71",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "usr_seller_marco",
+      "name": "Marco Rossi",
+      "email": "seller@masidy.com",
+      "role": "seller",
+      "phone": "+39 347 902 1834",
+      "sellerId": "seller_marco_rossi",
+      "passwordHash": "72c62b2979fbc782d4c2d25686e2c301ff8f86fd6593176bc6397eeaa1901d71",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "usr_admin_ops",
+      "name": "إدارة عمليات Masidy",
+      "email": "admin@masidy.com",
+      "role": "admin",
+      "phone": "+44 20 7946 0821",
+      "passwordHash": "72c62b2979fbc782d4c2d25686e2c301ff8f86fd6593176bc6397eeaa1901d71",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "sessions": [],
+  "organizations": [
+    {
+      "id": "org_med_horizons",
+      "name": "Mediterranean Horizons Travel",
+      "slug": "mediterranean-horizons",
+      "country": "Italy",
+      "city": "Rome",
+      "contactEmail": "reservations@medhorizons.example",
+      "phone": "+39 06 8821 4401",
+      "description": {
+        "ar": "شركة سياحة أوروبية متخصصة في الإقامات الساحلية والجولات الثقافية والرحلات الجوية بين المتوسط والشرق الأوسط.",
+        "en": "European hospitality and aviation provider specializing in coastal stays, heritage tours, and Mediterranean flight packages.",
+        "it": "Operatore europeo specializzato in soggiorni costieri, tour culturali e collegamenti aerei nel Mediterraneo."
+      },
+      "verified": true,
+      "subscriptionPlan": "free",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "org_nile_haramain",
+      "name": "Nile & Haramain Voyages",
+      "slug": "nile-haramain",
+      "country": "Egypt",
+      "city": "Cairo",
+      "contactEmail": "desk@nileharamain.example",
+      "phone": "+20 2 2735 9011",
+      "description": {
+        "ar": "مزود معتمد لخدمات العمرة والحج والنقل التنفيذي والرحلات البحرية في البحر الأحمر والنيل.",
+        "en": "Licensed operator for Umrah & Hajj journeys, executive airport transfers, Red Sea cruises, and visa concierge.",
+        "it": "Operatore autorizzato per pellegrinaggi Umrah, trasferimenti privati, crociere sul Mar Rosso e servizi visti."
+      },
+      "verified": true,
+      "subscriptionPlan": "free",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "organizationMembers": [
+    {
+      "id": "mem_1",
+      "organizationId": "org_med_horizons",
+      "userId": "usr_provider_med",
+      "name": "طارق العوضي",
+      "email": "provider@masidy.com",
+      "memberRole": "owner",
+      "permissions": [
+        "catalog:write",
+        "bookings:confirm",
+        "quotations:send",
+        "staff:manage",
+        "finance:read"
+      ],
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "mem_2",
+      "organizationId": "org_med_horizons",
+      "name": "Elena Conti",
+      "email": "elena@medhorizons.example",
+      "memberRole": "manager",
+      "permissions": [
+        "catalog:write",
+        "bookings:confirm",
+        "quotations:send"
+      ],
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "mem_3",
+      "organizationId": "org_nile_haramain",
+      "userId": "usr_provider_nile",
+      "name": "ياسر الشريف",
+      "email": "nile@masidy.com",
+      "memberRole": "owner",
+      "permissions": [
+        "catalog:write",
+        "bookings:confirm",
+        "quotations:send",
+        "staff:manage",
+        "finance:read"
+      ],
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "sellerProfiles": [
+    {
+      "id": "seller_marco_rossi",
+      "userId": "usr_seller_marco",
+      "displayName": "Marco Rossi Travel Media",
+      "bio": "Curated Mediterranean & Red Sea travel advisor connecting European and Arab travelers with verified agencies.",
+      "referralCode": "MARCO10",
+      "couponCode": "MASIDY10",
+      "totalClicks": 42,
+      "totalConversions": 2,
+      "pendingBalanceEur": 64.8,
+      "settledBalanceEur": 120,
+      "verified": true,
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "affiliateLinks": [
+    {
+      "id": "aff_1",
+      "sellerId": "seller_marco_rossi",
+      "productId": "prd_amalfi_suite",
+      "productTitle": {
+        "ar": "إقامة جناح بانورامي مطل على ساحل أمالفي",
+        "en": "Amalfi Cliffside Infinity Suite",
+        "it": "Suite Panoramica a Strapiombo su Amalfi"
+      },
+      "providerName": "Mediterranean Horizons Travel",
+      "code": "MARCO10",
+      "couponCode": "MASIDY10",
+      "url": "/?product=prd_amalfi_suite&ref=MARCO10",
+      "clicks": 28,
+      "conversions": 1,
+      "earnedEur": 40.8,
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "aff_2",
+      "sellerId": "seller_marco_rossi",
+      "productId": "prd_tuscany_heritage",
+      "productTitle": {
+        "ar": "جولة تراثية سياحية في أحياء روما وتوسكانا التاريخية",
+        "en": "Rome & Tuscany Architectural Heritage Guided Tour",
+        "it": "Tour Storico Architettonico di Roma e Toscana"
+      },
+      "providerName": "Mediterranean Horizons Travel",
+      "code": "MARCO10",
+      "couponCode": "MASIDY10",
+      "url": "/?product=prd_tuscany_heritage&ref=MARCO10",
+      "clicks": 14,
+      "conversions": 1,
+      "earnedEur": 24,
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "usr_customer_layla",
+      "productId": "prd_amalfi_suite"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_amalfi_suite",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "category": "hotels",
+      "productModel": "availability",
+      "title": {
+        "ar": "إقامة جناح بانورامي مطل على ساحل أمالفي",
+        "en": "Amalfi Cliffside Infinity Suite",
+        "it": "Suite Panoramica a Strapiombo su Amalfi"
+      },
+      "description": {
+        "ar": "إقامة فندقية فاخرة مع مسبح خاص لا متناهي وإفطار متوسطي وإطلالة مباشرة على البحر.",
+        "en": "Boutique coastal suite featuring a private infinity terrace, Mediterranean breakfast, and direct sea access.",
+        "it": "Suite boutique sulla costiera con terrazza panoramica, piscina a sfioro e colazione mediterranea."
+      },
+      "destination": {
+        "ar": "ساحل أمالفي، إيطاليا",
+        "en": "Amalfi Coast, Italy",
+        "it": "Costiera Amalfitana, Italia"
+      },
+      "country": "Italy",
+      "baseCurrency": "EUR",
+      "price": 340,
+      "providerCost": 238,
+      "instantBooking": false,
+      "published": true,
+      "rating": 4.9,
+      "reviewCount": 38,
+      "imageUrl": "/src/assets/images/service_hotels_resort_1794591853761.jpg",
+      "durationLabel": {
+        "ar": "ليلة واحدة / جناح",
+        "en": "Per Night / Suite",
+        "it": "Per Notte / Suite"
+      },
+      "cancellationPolicy": {
+        "ar": "إلغاء مجاني حتى 72 ساعة قبل موعد الوصول.",
+        "en": "Free cancellation up to 72 hours prior to check-in.",
+        "it": "Cancellazione gratuita fino a 72 ore prima del check-in."
+      },
+      "availableDates": [
+        "2026-11-20",
+        "2026-11-25",
+        "2026-12-01",
+        "2026-12-10"
+      ],
+      "maxCapacity": 4,
+      "specs": {
+        "roomType": "Sea View Suite",
+        "board": "Breakfast Included",
+        "wifi": "High-Speed"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_cairo_rome_flight",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "category": "flights",
+      "productModel": "availability",
+      "title": {
+        "ar": "تذكرة طيران ذهاب وعودة: القاهرة — روما (درجة الأعمال المرنة)",
+        "en": "Cairo to Rome Round-Trip Flight (Flex Business)",
+        "it": "Volo A/R Il Cairo — Roma (Business Flessibile)"
+      },
+      "description": {
+        "ar": "رحلة مباشرة ذهاب وعودة مع أمتعة مسجلة 32 كجم وإمكانية تعديل الموعد وصالة كبار الشخصيات.",
+        "en": "Direct round-trip aviation fare including 32kg checked baggage, lounge access, and flexible date changes.",
+        "it": "Volo diretto A/R con bagaglio 32kg, accesso lounge e cambio data flessibile."
+      },
+      "destination": {
+        "ar": "روما، إيطاليا",
+        "en": "Rome, Italy",
+        "it": "Roma, Italia"
+      },
+      "country": "Italy",
+      "baseCurrency": "EUR",
+      "price": 520,
+      "providerCost": 420,
+      "instantBooking": true,
+      "published": true,
+      "rating": 4.8,
+      "reviewCount": 64,
+      "imageUrl": "/src/assets/images/service_flights_aviation_1794591853771.jpg",
+      "durationLabel": {
+        "ar": "ذهاب وعودة · مباشر",
+        "en": "Round Trip · Direct",
+        "it": "A/R · Diretto"
+      },
+      "cancellationPolicy": {
+        "ar": "استرداد 85% قبل الإقلاع بـ 48 ساعة.",
+        "en": "85% refundable up to 48 hours before departure.",
+        "it": "Rimborsabile all’85% fino a 48 ore prima della partenza."
+      },
+      "availableDates": [
+        "2026-11-18",
+        "2026-11-22",
+        "2026-12-05",
+        "2026-12-15"
+      ],
+      "maxCapacity": 9,
+      "specs": {
+        "cabin": "Business Flex",
+        "baggage": "32kg + Cabin",
+        "routing": "CAI - FCO Direct"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_tuscany_heritage",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "category": "tours",
+      "productModel": "fixed",
+      "title": {
+        "ar": "جولة تراثية سياحية في أحياء روما وتوسكانا التاريخية",
+        "en": "Rome & Tuscany Architectural Heritage Guided Tour",
+        "it": "Tour Storico Architettonico di Roma e Toscana"
+      },
+      "description": {
+        "ar": "جولة يوم كامل مع مرشد سياحي معتمد يتحدث العربية والإنجليزية والإيطالية شامل تذاكر الدخول.",
+        "en": "Full-day guided walking tour through historic piazzas and colonnades with licensed multilingual guide and priority entry.",
+        "it": "Tour guidato di un’intera giornata tra piazze storiche e logge con guida multilingue certificata."
+      },
+      "destination": {
+        "ar": "توسكانا وروما",
+        "en": "Tuscany & Rome",
+        "it": "Toscana e Roma"
+      },
+      "country": "Italy",
+      "baseCurrency": "EUR",
+      "price": 110,
+      "providerCost": 72,
+      "instantBooking": true,
+      "published": true,
+      "rating": 4.9,
+      "reviewCount": 92,
+      "imageUrl": "/src/assets/images/service_tours_heritage_1794591854051.jpg",
+      "durationLabel": {
+        "ar": "يوم كامل (8 ساعات)",
+        "en": "Full Day (8 hrs)",
+        "it": "Giornata Intera (8h)"
+      },
+      "cancellationPolicy": {
+        "ar": "إلغاء مجاني قبل 24 ساعة من الانطلاق.",
+        "en": "Free cancellation up to 24 hours before departure.",
+        "it": "Cancellazione gratuita fino a 24 ore prima della partenza."
+      },
+      "availableDates": [
+        "2026-11-16",
+        "2026-11-19",
+        "2026-11-24",
+        "2026-12-02"
+      ],
+      "maxCapacity": 15,
+      "specs": {
+        "tourType": "Small Group",
+        "languages": "AR / EN / IT",
+        "guide": "Certified Historian"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_vip_airport_transfer",
+      "organizationId": "org_nile_haramain",
+      "providerName": "Nile & Haramain Voyages",
+      "category": "transport",
+      "productModel": "fixed",
+      "title": {
+        "ar": "استقبال مطار خاص بسيارة مرسيدس V-Class مع سائق",
+        "en": "Executive Mercedes V-Class Private Airport Transfer",
+        "it": "Transfer Privato Aeroporto in Mercedes V-Class"
+      },
+      "description": {
+        "ar": "نقل خاص مباشر من المطار إلى الفندق مع متابعة فورية لموعد الرحلة وسائق محترف يتحدث لغتك.",
+        "en": "Door-to-door private chauffeur service with live flight tracking, meet-and-greet signage, and luggage assistance.",
+        "it": "Servizio privato porta a porta con autista, monitoraggio volo e assistenza bagagli."
+      },
+      "destination": {
+        "ar": "القاهرة / دبي / الرياض",
+        "en": "Cairo / Dubai / Riyadh",
+        "it": "Il Cairo / Dubai / Riad"
+      },
+      "country": "Egypt",
+      "baseCurrency": "USD",
+      "price": 95,
+      "providerCost": 62,
+      "instantBooking": true,
+      "published": true,
+      "rating": 4.9,
+      "reviewCount": 51,
+      "imageUrl": "/src/assets/images/service_transport_chauffeur_1794591854886.jpg",
+      "durationLabel": {
+        "ar": "اتجاه واحد · حتى 6 ركاب",
+        "en": "One-Way · Up to 6 Pax",
+        "it": "Sola andata · Max 6 Pax"
+      },
+      "cancellationPolicy": {
+        "ar": "تعديل أو إلغاء مجاني قبل 12 ساعة.",
+        "en": "Free modification or cancellation up to 12 hours prior.",
+        "it": "Modifica o cancellazione gratuita fino a 12 ore prima."
+      },
+      "availableDates": [
+        "2026-11-15",
+        "2026-11-20",
+        "2026-11-28",
+        "2026-12-04"
+      ],
+      "maxCapacity": 6,
+      "specs": {
+        "vehicle": "Mercedes V300d",
+        "driver": "Multilingual Chauffeur",
+        "waitingTime": "60 mins free"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_umrah_executive",
+      "organizationId": "org_nile_haramain",
+      "providerName": "Nile & Haramain Voyages",
+      "category": "hajj_umrah",
+      "productModel": "availability",
+      "title": {
+        "ar": "باقة العمرة المتميزة (5 ليالي مكة والمدينة + تأشيرة + تنقلات)",
+        "en": "Premium Umrah 5-Night Program (Makkah & Madinah + Visa)",
+        "it": "Programma Umrah Premium 5 Notti (Mecca & Medina + Visto)"
+      },
+      "description": {
+        "ar": "برنامج متكامل يشمل الإقامة القريبة من الحرمين وإصدار التأشيرة والانتقالات الخاصة بقطار الحرمين أو مركبات VIP.",
+        "en": "Complete Umrah package including Haram-view 5-star stays, Umrah visa issuance, and VIP intercity transfers.",
+        "it": "Pacchetto completo con hotel 5 stelle vicino ai Santuari, visto Umrah e trasferimenti VIP."
+      },
+      "destination": {
+        "ar": "مكة المكرمة والمدينة المنورة",
+        "en": "Makkah & Madinah",
+        "it": "Mecca e Medina"
+      },
+      "country": "Saudi Arabia",
+      "baseCurrency": "USD",
+      "price": 1180,
+      "providerCost": 920,
+      "instantBooking": false,
+      "published": true,
+      "rating": 5,
+      "reviewCount": 44,
+      "imageUrl": "/src/assets/images/service_spiritual_architecture_1794591855140.jpg",
+      "durationLabel": {
+        "ar": "5 ليالي / 6 أيام",
+        "en": "5 Nights / 6 Days",
+        "it": "5 Notti / 6 Giorni"
+      },
+      "cancellationPolicy": {
+        "ar": "تطبق شروط التأشيرة والفنادق؛ استرداد كامل قبل الإصدار بـ 10 أيام.",
+        "en": "Full refund available up to 10 days before visa issuance.",
+        "it": "Rimborso completo fino a 10 giorni prima dell’emissione del visto."
+      },
+      "availableDates": [
+        "2026-11-24",
+        "2026-12-03",
+        "2026-12-12",
+        "2026-12-20"
+      ],
+      "maxCapacity": 20,
+      "specs": {
+        "visa": "Included",
+        "transport": "Haramain Rail / VIP Van",
+        "guidance": "24/7 Coordinator"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_red_sea_cruise",
+      "organizationId": "org_nile_haramain",
+      "providerName": "Nile & Haramain Voyages",
+      "category": "cruises",
+      "productModel": "availability",
+      "title": {
+        "ar": "رحلة بحرية فاخرة في البحر الأحمر والجزر المرجانية (3 ليالي)",
+        "en": "Red Sea Coral Islands 3-Night Boutique Cruise",
+        "it": "Crociera Boutique di 3 Notti sulle Isole del Mar Rosso"
+      },
+      "description": {
+        "ar": "إبحار شامل الإقامة والوجبات وأنشطة الغوص والانتقالات من مطار شرم الشيخ والغردقة.",
+        "en": "All-inclusive 3-night Red Sea yacht voyage with marine excursions, chef dining, and port transfers.",
+        "it": "Navigazione di 3 notti nel Mar Rosso tutto incluso con escursioni marine e trasferimenti."
+      },
+      "destination": {
+        "ar": "شرم الشيخ والبحر الأحمر",
+        "en": "Sharm El Sheikh, Red Sea",
+        "it": "Sharm El Sheikh, Mar Rosso"
+      },
+      "country": "Egypt",
+      "baseCurrency": "EGP",
+      "price": 24500,
+      "providerCost": 17900,
+      "instantBooking": false,
+      "published": true,
+      "rating": 4.8,
+      "reviewCount": 27,
+      "imageUrl": "/src/assets/images/hero_masidy_travel_1794591852990.jpg",
+      "durationLabel": {
+        "ar": "3 ليالي / إقامة كاملة",
+        "en": "3 Nights · Full Board",
+        "it": "3 Notti · Pensione Completa"
+      },
+      "cancellationPolicy": {
+        "ar": "إلغاء مجاني قبل الإبحار بـ 5 أيام.",
+        "en": "Free cancellation up to 5 days before sailing.",
+        "it": "Cancellazione gratuita fino a 5 giorni prima della partenza."
+      },
+      "availableDates": [
+        "2026-11-21",
+        "2026-11-29",
+        "2026-12-08"
+      ],
+      "maxCapacity": 12,
+      "specs": {
+        "vessel": "Boutique Motor Yacht",
+        "meals": "Full Board",
+        "gear": "Snorkeling Included"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "prd_corporate_bespoke",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "category": "visas_packages",
+      "productModel": "request",
+      "title": {
+        "ar": "برنامج سياحي مخصص للمجموعات والشركات + تسهيل التأشيرات",
+        "en": "Bespoke Corporate & Group Travel Package + Visa Concierge",
+        "it": "Pacchetto Viaggi Aziendali e Gruppi + Assistenza Visti"
+      },
+      "description": {
+        "ar": "تصميم برنامج سفر متكامل (طيران + فنادق + قاعات + تأشيرات شنغن) حسب طلب العميل وبأسعار تعاقدية.",
+        "en": "Tailored end-to-end itinerary design for groups and corporate delegations including Schengen visa files, stays, and transport.",
+        "it": "Itinerario su misura per gruppi e aziende comprensivo di assistenza visti Schengen, hotel e logistica."
+      },
+      "destination": {
+        "ar": "أوروبا والشرق الأوسط",
+        "en": "Europe & MENA",
+        "it": "Europa & MENA"
+      },
+      "country": "Multi-Country",
+      "baseCurrency": "EUR",
+      "price": 890,
+      "providerCost": 650,
+      "instantBooking": false,
+      "published": true,
+      "rating": 4.9,
+      "reviewCount": 19,
+      "imageUrl": "/src/assets/images/service_tours_heritage_1794591854051.jpg",
+      "durationLabel": {
+        "ar": "حسب الطلب · عرض سعر",
+        "en": "Custom · Quote Based",
+        "it": "Su Misura · Preventivo"
+      },
+      "cancellationPolicy": {
+        "ar": "تحدد شروط الإلغاء داخل عرض السعر المعتمد.",
+        "en": "Cancellation terms detailed within the approved quotation.",
+        "it": "Termini di cancellazione definiti nel preventivo approvato."
+      },
+      "availableDates": [],
+      "maxCapacity": 60,
+      "specs": {
+        "model": "Request-Based",
+        "visas": "Schengen / GCC Support",
+        "dedicatedManager": "Yes"
+      },
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bkg_seed_101",
+      "referenceCode": "MSD-2611-101",
+      "productId": "prd_amalfi_suite",
+      "productTitle": {
+        "ar": "إقامة جناح بانورامي مطل على ساحل أمالفي",
+        "en": "Amalfi Cliffside Infinity Suite",
+        "it": "Suite Panoramica a Strapiombo su Amalfi"
+      },
+      "category": "hotels",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "customerId": "usr_customer_layla",
+      "customerName": "ليلى المنصور",
+      "customerEmail": "customer@masidy.com",
+      "sellerId": "seller_marco_rossi",
+      "sellerName": "Marco Rossi Travel Media",
+      "affiliateCode": "MARCO10",
+      "checkInDate": "2026-11-25",
+      "checkOutDate": "2026-11-27",
+      "travelersCount": 1,
+      "travelerNames": [
+        "ليلى المنصور"
+      ],
+      "specialNotes": "Late check-in around 19:00",
+      "status": "Confirmed",
+      "instantBooking": false,
+      "originalCurrency": "EUR",
+      "exchangeRateAtBooking": 1,
+      "unitPriceOriginal": 340,
+      "totalOriginal": 340,
+      "totalEur": 340,
+      "commissionSnapshot": {
+        "ruleId": "rule_hotels",
+        "ruleName": "Hospitality & Resorts Tier",
+        "grossEur": 340,
+        "providerCostEur": 238,
+        "sellerCommissionEur": 40.8,
+        "platformFeeEur": 20.4,
+        "companyMarginEur": 40.8
+      },
+      "statusHistory": [
+        {
+          "status": "Awaiting Provider Confirmation",
+          "note": "Booking submitted via affiliate MARCO10",
+          "actorName": "ليلى المنصور",
+          "timestamp": "2026-11-13T17:50:09.331Z"
+        },
+        {
+          "status": "Confirmed",
+          "note": "Suite confirmed and inventory locked by Mediterranean Horizons Travel",
+          "actorName": "طارق العوضي",
+          "timestamp": "2026-11-13T17:50:09.331Z"
+        }
+      ],
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "bkg_seed_102",
+      "referenceCode": "MSD-2611-102",
+      "productId": "prd_umrah_executive",
+      "productTitle": {
+        "ar": "باقة العمرة المتميزة (5 ليالي مكة والمدينة + تأشيرة + تنقلات)",
+        "en": "Premium Umrah 5-Night Program (Makkah & Madinah + Visa)",
+        "it": "Programma Umrah Premium 5 Notti (Mecca & Medina + Visto)"
+      },
+      "category": "hajj_umrah",
+      "organizationId": "org_nile_haramain",
+      "providerName": "Nile & Haramain Voyages",
+      "customerId": "usr_customer_layla",
+      "customerName": "ليلى المنصور",
+      "customerEmail": "customer@masidy.com",
+      "checkInDate": "2026-12-03",
+      "travelersCount": 2,
+      "travelerNames": [
+        "ليلى المنصور",
+        "كريم المنصور"
+      ],
+      "status": "Awaiting Provider Confirmation",
+      "instantBooking": false,
+      "originalCurrency": "USD",
+      "exchangeRateAtBooking": 1.08,
+      "unitPriceOriginal": 1180,
+      "totalOriginal": 2360,
+      "totalEur": 2185.19,
+      "commissionSnapshot": {
+        "ruleId": "rule_hajj_umrah",
+        "ruleName": "Pilgrimage Concierge Rule",
+        "grossEur": 2185.19,
+        "providerCostEur": 1703.7,
+        "sellerCommissionEur": 0,
+        "platformFeeEur": 87.41,
+        "companyMarginEur": 394.08
+      },
+      "statusHistory": [
+        {
+          "status": "Awaiting Provider Confirmation",
+          "note": "Request created; waiting for provider visa & room confirmation",
+          "actorName": "ليلى المنصور",
+          "timestamp": "2026-11-13T17:50:09.331Z"
+        }
+      ],
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "travelRequests": [
+    {
+      "id": "req_seed_1",
+      "customerId": "usr_customer_layla",
+      "customerName": "ليلى المنصور",
+      "destination": "Florence & Amalfi Coast, Italy",
+      "travelDate": "2026-12-18",
+      "travelersCount": 4,
+      "budget": 3800,
+      "currency": "EUR",
+      "accommodationType": "5-Star Boutique Hotel",
+      "requestedServices": [
+        "flights",
+        "hotels",
+        "transport",
+        "tours"
+      ],
+      "notes": "Family trip with private airport transfer and bilingual guided tours.",
+      "status": "Quoted",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "quotations": [
+    {
+      "id": "quo_seed_1",
+      "requestId": "req_seed_1",
+      "organizationId": "org_med_horizons",
+      "providerName": "Mediterranean Horizons Travel",
+      "quotedPrice": 3450,
+      "currency": "EUR",
+      "validUntil": "2026-11-30",
+      "summary": "Complete 6-night Florence & Amalfi family itinerary including private Mercedes V-Class transfers and boutique sea-view rooms.",
+      "items": [
+        {
+          "title": "4x Round-Trip Flights (Cairo - Rome)",
+          "amount": 1680
+        },
+        {
+          "title": "6 Nights Coastal Boutique Suites (2 Rooms)",
+          "amount": 1320
+        },
+        {
+          "title": "Private Transfers & Heritage Tours",
+          "amount": 450
+        }
+      ],
+      "status": "Quoted",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "commissionRules": [
+    {
+      "id": "rule_global_default",
+      "name": "Global Marketplace Standard",
+      "scope": "global",
+      "platformPercent": 5,
+      "sellerPercent": 10,
+      "fixedFeeEur": 0,
+      "active": true
+    },
+    {
+      "id": "rule_hotels",
+      "name": "Hospitality & Resorts Tier",
+      "scope": "category",
+      "category": "hotels",
+      "platformPercent": 6,
+      "sellerPercent": 12,
+      "fixedFeeEur": 0,
+      "active": true
+    },
+    {
+      "id": "rule_flights",
+      "name": "Aviation Standard Margin",
+      "scope": "category",
+      "category": "flights",
+      "platformPercent": 3,
+      "sellerPercent": 5,
+      "fixedFeeEur": 4,
+      "active": true
+    },
+    {
+      "id": "rule_hajj_umrah",
+      "name": "Pilgrimage Concierge Rule",
+      "scope": "category",
+      "category": "hajj_umrah",
+      "platformPercent": 4,
+      "sellerPercent": 8,
+      "fixedFeeEur": 0,
+      "active": true
+    }
+  ],
+  "ledgerEntries": [
+    {
+      "id": "led_seed_1",
+      "bookingId": "bkg_seed_101",
+      "accountType": "provider",
+      "entityId": "org_med_horizons",
+      "entityName": "Mediterranean Horizons Travel",
+      "entryType": "provider_payable",
+      "amountEur": 278.8,
+      "originalCurrency": "EUR",
+      "originalAmount": 278.8,
+      "exchangeRate": 1,
+      "description": "Provider settlement share (cost + margin) for MSD-2611-101",
+      "createdAt": "2026-11-13T17:50:09.331Z",
+      "immutable": true
+    },
+    {
+      "id": "led_seed_2",
+      "bookingId": "bkg_seed_101",
+      "accountType": "seller",
+      "entityId": "seller_marco_rossi",
+      "entityName": "Marco Rossi Travel Media",
+      "entryType": "seller_commission",
+      "amountEur": 40.8,
+      "originalCurrency": "EUR",
+      "originalAmount": 40.8,
+      "exchangeRate": 1,
+      "description": "Affiliate commission (12%) for MSD-2611-101 via MARCO10",
+      "createdAt": "2026-11-13T17:50:09.331Z",
+      "immutable": true
+    },
+    {
+      "id": "led_seed_3",
+      "bookingId": "bkg_seed_101",
+      "accountType": "platform",
+      "entityId": "masidy_platform",
+      "entityName": "MASIDY Platform Revenue",
+      "entryType": "platform_fee",
+      "amountEur": 20.4,
+      "originalCurrency": "EUR",
+      "originalAmount": 20.4,
+      "exchangeRate": 1,
+      "description": "Platform fee (6%) for MSD-2611-101",
+      "createdAt": "2026-11-13T17:50:09.331Z",
+      "immutable": true
+    }
+  ],
+  "payouts": [
+    {
+      "id": "pay_seed_1",
+      "recipientType": "seller",
+      "recipientId": "seller_marco_rossi",
+      "recipientName": "Marco Rossi Travel Media",
+      "amountEur": 40.8,
+      "status": "Pending",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    },
+    {
+      "id": "pay_seed_2",
+      "recipientType": "provider",
+      "recipientId": "org_med_horizons",
+      "recipientName": "Mediterranean Horizons Travel",
+      "amountEur": 278.8,
+      "status": "Pending",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "productId": "prd_amalfi_suite",
+      "customerId": "usr_customer_layla",
+      "customerName": "ليلى المنصور",
+      "rating": 5,
+      "comment": "Seamless booking process and the terrace view exceeded expectations.",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "supportTickets": [
+    {
+      "id": "tkt_1",
+      "bookingId": "bkg_seed_101",
+      "userId": "usr_customer_layla",
+      "userName": "ليلى المنصور",
+      "role": "customer",
+      "subject": "Invoice copy with EGP conversion note",
+      "message": "Please attach the VAT invoice for booking MSD-2611-101.",
+      "status": "Open",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_1",
+      "actorId": "usr_admin_ops",
+      "actorName": "إدارة عمليات Masidy",
+      "actorRole": "admin",
+      "action": "PLATFORM_INITIALIZED",
+      "entityType": "system",
+      "entityId": "masidy_core",
+      "details": "Initialized Masidy Travel Marketplace v0.1 modular monolith with multi-currency ledger and commission engine.",
+      "createdAt": "2026-11-13T17:50:09.331Z"
+    }
+  ]
+}
